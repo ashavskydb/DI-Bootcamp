@@ -42,9 +42,7 @@ else:
     
     user_number = input (int('Give me a number'))
 
-    if user_number % 3 == 0:
-        print('Fizzz')
+    if user_number % 3 == 0: and user_number % 5 == 0
+    print('Fizzz')
     elif user_number % 5 ==0:
-        print('Buzzz')
-
-        #hello
+    print('Buzzz')
