@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">Users:</div>
+    <ul class="list">
+        <li>John</li>
+        <li>Pete</li>
+    </ul>
+    <ul class="list">
+        <li>David</li>
+        <li>Sarah</li>
+        <li>Dan</li>
+    </ul>
+    <script>
+        let div = document.querySelector('#container');
+        console.log(div);
+
+        let ul = document.getElementsByClassName('list');
+        console.log(ul);
+
+        let ulFirst = ul[0];
+        ulFirst.lastElementChild.innerHTML = 'Richard';
+
+        let ulSec = ul[1];
+        ulSec.removeChild(ulSec.children[1]);
+
+        for (let list of ul){
+            list.firstElementChild.innerHTML = 'Dmitry';
+        }
+
+        // for (let list of ul){
+        //     console.log(list);
+        //     list.setAttribute('class', 'student_list');
+        // }
+
+        ul[0].setAttribute('class', 'student_list');
+        ul[1].setAttribute('class', 'student_list');
+
+        ul[0].classList.add('university', 'attendance')
+
+        div.style.backroundColor = 'lightblue'
+        div.style.padding = '10px'
+
+        ul[1].lastElementChild.style.display = 'none'
+        ul[1].lastElementChild.style.border = '1px solid black'
+
+        let body = document.querySelector('body')
+        body.style.fontSize = '50px'
+    </script>
+</body>
+</html>
