@@ -1,0 +1,57 @@
+<!-- Exercice 4 : Volume Of A Sphere -->
+
+<!doctype html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="utf-8"> 
+        <title>Volume of a Sphere</title> 
+        <style>  
+            body {
+                padding-top:30px;
+            } 
+
+            label,input {
+                display:block;
+            }  
+        </style> 
+    </head> 
+    <body> 
+        <p>Input radius value and get the volume of a sphere.</p> 
+        <form  id="MyForm"> 
+            <label for="radius">Radius</label><input type="text" name="radius" id="radius" required> 
+            <label for="volume">Volume</label><input type="text" name="volume" id="volume"> 
+            <input type="submit" value="Calculate" id="submit">    
+        </form> 
+        
+
+    
+        <script>
+            let form = document.forms[0]
+            
+            form.addEventListener('submit', CalculateAndOutput);
+
+            function getRadius(e){
+                e.preventDefault()
+                return parseFloat(form.elements.radius.value);
+            }
+
+            function CalculateVolume(radius){
+                return (4/3 * 3.14 * Math.pow(radius, 3));
+            }
+            function displayVolume(volume){
+                form.elements.volume.value = volume.toFixed(2);
+            }
+
+            function CalculateAndOutput(e){
+                let radius = getRadius(e);
+                let volume = CalculateVolume(radius);
+                displayVolume(volume);
+            }
+
+            // getRadius(e)
+            // CalculateVolume(5)
+
+            
+        </script>
+</body> 
+</html> 
