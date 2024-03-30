@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: darkgrey;
+}
+  
+  #color-picker {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    height: 100vh;
+    width: 20%;
+    float: left;
+    background-color: darkgrey;
+    padding: 5px;
+  }
+  
+  #grid-container {
+    display: grid;
+    grid-template-columns: repeat(100, 1fr); 
+    grid-template-rows: repeat(100, 1fr);
+    height: 100vh;
+    padding: 5px 5px 5px 0;
+  }
+  
+  button {
+    grid-column: 1/4;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 8px;
+    color: black;
+    padding: 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 5px 3px;
+    cursor: pointer;
+    
+  }
+  
+  .square {
+    border: 1px lightgray solid;
+    background-color: white;
+  }
+
+
+  #colorPalette {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.color-block {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.color.selected {
+    border: 2px solid white; 
+}
+
+
+
+
+
+
+
+
