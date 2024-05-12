@@ -25,7 +25,7 @@
 
 .calculator button {
   color: white;
-  background-color: #4a148c; /* Темно-пурпурный */
+  background-color: #4a148c; 
   cursor: pointer;
   width: 85%;
   font-size: 1em;
